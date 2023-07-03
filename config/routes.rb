@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  # get 'user/index'
+  namespace :management do
+      resources :students
+      resources :teachers
+      resources :admins
+
+      root to: "admins#index"
+    end
+  # get 'user/index
   # devise_for :teachers
   # devise_for :students
   # devise_for :admins
