@@ -7,4 +7,5 @@ class Student < ApplicationRecord
   validates :full_name, presence: true
   validates :contact_number, presence: true
   validates :parent_name, presence: true
+  validates :email, presence: true
 end

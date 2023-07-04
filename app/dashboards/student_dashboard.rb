@@ -64,19 +64,11 @@ class StudentDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
-    contact_number
-    current_sign_in_at
-    current_sign_in_ip
-    email
-    encrypted_password
     full_name
-    last_sign_in_at
-    last_sign_in_ip
+    email
+    contact_number
     parent_name
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    sign_in_count
+    encrypted_password
   ].freeze
 
   # COLLECTION_FILTERS

@@ -7,4 +7,5 @@ class Teacher < ApplicationRecord
   validates :full_name, presence: true
   validates :contact_number, presence: true
   validates :subject, presence: true
+  validates :email, presence: true
 end

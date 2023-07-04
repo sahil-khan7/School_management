@@ -61,18 +61,10 @@ class AdminDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
+    full_name
     contact_number
-    current_sign_in_at
-    current_sign_in_ip
     email
     encrypted_password
-    full_name
-    last_sign_in_at
-    last_sign_in_ip
-    remember_created_at
-    reset_password_sent_at
-    reset_password_token
-    sign_in_count
   ].freeze
 
   # COLLECTION_FILTERS
