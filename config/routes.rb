@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'faculties/index'
+  get 'faculties/new'
+  get 'faculties/show'
+  get 'faculties/destroy'
+  get 'principals/index'
+  get 'principals/new'
+  get 'principals/show'
+  get 'principals/destroy'
   # get 'books/index'
   # get 'books/show'
   # get 'books/new'

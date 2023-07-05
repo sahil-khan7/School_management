@@ -1,34 +1,28 @@
-
-<p class="heading1" > School Management System </p>
-<p class="heading">Home Page</p>  
-<% if admin_signed_in? %> 
-    <div class="heading"> Welcome <%= current_admin.email %> </div>
-    <br>
-    <%= link_to "personal details", admins_path %>
-    <%=  button_to "Sign out", destroy_admin_session_path, method: :delete ,class: "btn-custom"%> 
-    <br>
-    <%=  link_to "Edit" , edit_admin_registration_path %> 
+<% if admin_signed_in? %>
+  <div>Welcome <%= current_admin.email %></div>
+  <div class="log_in">
+  <%= link_to "Admin Detail",  principals_index_path %> <b  r>
+  <%= link_to "Teacher Detail",  faculties_index_path %>
+  <%= button_to "Sign out", destroy_admin_session_path, method: :delete %>
+  <%= link_to "edit", edit_admin_registration_path %>
+  </div>
 <% elsif teacher_signed_in? %>
-    <div class="heading"> Welcome <%= current_teacher.email %> </div> 
+  <%= link_to "Teacher Detail",  faculties_index_path %>
+  <%= button_to "Sign out", destroy_teacher_session_path, method: :delete, class: "btn-custom" %>
+  <%= link_to "edit", edit_teacher_registration_path %>
 
-    <br>
-    <%=  link_to "Edit" , edit_teacher_registration_path %> 
-    <br>
-    <%= button_to "Sign out", destroy_teacher_session_path, method: :delete ,class: "btn-custom" %> 
-  
-<% elsif student_signed_in? %> 
-    <div class="heading"> Welcome <%= current_student.email %> </div>
-    <%= button_to "Sign out", destroy_student_session_path, method: :delete ,class: "btn-custom" %> <br>
-    <%=  link_to "Edit" , edit_student_registration_path %> 
+<% elsif student_signed_in? %>
+  <%= button_to "Sign out", destroy_student_session_path, method: :delete, class: "btn-custom" %>
+  <%= link_to "edit", edit_student_registration_path %>
 
 <% else %>
-  <p class="heading">Home Page</p>  
-  <p class="heading">select your role</p>
+  <div class="heading">
+  <h1>School Management System</h1> <br/>
+  <h2>Select your role:</h2>
+  </div>
   <div class="button-container">
-  <%= button_to "Admin", new_admin_session_path , class: "btn-custom"%> 
-  <br>
-  <%= button_to "Teacher", new_teacher_session_path , class: "btn-custom"%> 
-  <br>
-  <%= button_to "Student", new_student_session_path , class: "btn-custom"%> 
+  <%= button_to "Admin",   new_admin_session_path , class: "btn-custom" %>
+  <%= button_to "Teacher", new_teacher_session_path, class: "btn-custom" %>
+  <%= button_to "Student",  new_student_session_path, class: "btn-custom" %>
 </div>
 <% end %>

@@ -1,0 +1,19 @@
+<h1>Teachers List</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>E-Mail</th>
+            <th>Contact Number</th>
+            <th>Subject</th>
+        </tr>
+        <% @teachers.each do |teachers| %>
+            <tr>
+            <td><%= teachers.full_name %></td>
+            <td><%= teachers.email %></td>
+            <td><%= teachers.contact_number %></td>
+            <td><%= teachers.subject %></td>
+            </tr>
+        <% end %>
+    </table>
+

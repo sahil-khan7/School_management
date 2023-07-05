@@ -1,0 +1,17 @@
+<h1>Admins List</h1>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>E-Mail</th>
+            <th>Contact Number</th>
+        </tr>
+        <% @admins.each do |admins| %>
+            <tr>
+            <td><%= admins.full_name %></td>
+            <td><%= admins.email %></td>
+            <td><%= admins.contact_number %></td>
+            </tr>
+        <% end %>
+    </table>
+
