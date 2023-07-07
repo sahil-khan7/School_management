@@ -1,27 +1,4 @@
-/* table, th, td {
-    border:1px solid black;
-  } */
-/*   
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  th, td {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ddd;  
-
-  }
-  th {
-    background-color: #F2F2F2;
-  }
-
-
-tr:hover {background-color: rgb(124, 208, 214);} */
-
 body {
-    /* background-image: linear-gradient(to top, #209cff 0%, #68e0cf 100%); */
-    /* background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%); */
     background-image: url('pexels-fauxels-3183198.jpg');
     background-size: cover;
     height: 95vh;
@@ -44,7 +21,7 @@ body {
   .log_in {
    /* background-color: #EBBB91;     */
    /* background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%); */
-   background-color: rgba(255, 255, 255, 0.5);
+   background-color: rgba(255, 255, 255, 0.1);
    background-blend-mode: normal, multiply;
    border: none;
    color: rgb(11, 11, 11);
@@ -56,13 +33,14 @@ body {
    margin: 10px 30%;
    border-radius: 15px ;
    width: 30vw;
-   height: 70vh;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+   /* height: 70vh; */
   }
   input {
     width: 40%;
     color: rgb(5, 2, 0);
     background-color: #FDFDFF;
-    border-radius: 10px;
+    border-radius: 5px;
     height: 20px;
     width: 250px;
   }
@@ -79,7 +57,7 @@ body {
   th {
     background-color: #F2F2F2;
   }
-  tr:hover {background-color: rgb(105, 240, 188);}
+  tr:hover {background-color: rgb(144, 241, 204);}
 
 .actions {
   height: 20px;

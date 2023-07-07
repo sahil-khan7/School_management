@@ -6,6 +6,9 @@
             <th>E-Mail</th>
             <th>Contact Number</th>
             <th>Subject</th>
+            <% if admin_signed_in? %>
+                <th>Edit</th>
+            <% end %>
         </tr>
         <% @teachers.each do |teachers| %>
             <tr>
@@ -13,6 +16,9 @@
             <td><%= teachers.email %></td>
             <td><%= teachers.contact_number %></td>
             <td><%= teachers.subject %></td>
+            <% if admin_signed_in? %>
+            <td><%= link_to "Edit", edit_teacher_registration_path %></td>
+            <% end %>
             </tr>
         <% end %>
     </table>

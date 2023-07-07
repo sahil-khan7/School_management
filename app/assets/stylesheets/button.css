@@ -4,7 +4,7 @@
     /* background-color: #FFE9B1; */
     background-image: linear-gradient(to right, #434343 0%, black 100%);
     /* background-image: linear-gradient(to top, #9be15d 0%, #00e3ae 100%); */
-
+  
     /* color: rgb(0, 0, 0); */
     color: whitesmoke;
     padding: 15px 20px;
@@ -14,9 +14,13 @@
     font-size: 20px;
     border-radius: 20px;
     
+
+    
   }
 
-
+.btn-custom:hover {
+  color: black;
+}
   .button-container {
     text-align: center;
     display: flex;
