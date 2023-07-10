@@ -2,6 +2,7 @@ body {
     background-image: url('pexels-fauxels-3183198.jpg');
     background-size: cover;
     height: 95vh;
+    background-repeat: no-repeat;
 }
 .button-container {
     text-align: center;
