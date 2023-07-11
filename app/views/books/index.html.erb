@@ -1,0 +1,22 @@
+<h1>Books List</h1>
+    <table>
+        <tr>
+            <th>Book Name</th>
+            <th>Auther Name</th>
+            <th>Edit</th>
+            <th>Destroy</th>
+        </tr>
+        <% @book.each do |books| %>
+            <tr>
+            <td><%= books.author_name %></td>   
+           <td><%= books.book_name %></td>
+           <td><%= link_to "Edit", edit_book_path(books)%></li>
+           <td><%= link_to "Destroy", book_path(books), data: {
+            turbo_method: :delete,
+            turbo_confirm: "Are you sure?"
+          } %></li>
+
+        <% end %>
+    </table>
+            
+    <%= button_to "New Book", new_book_path, method: :get, class: "btn-custom" %>

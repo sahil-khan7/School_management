@@ -1,0 +1,13 @@
+<h1><%= current_teacher.full_name %></h1>
+<p><%= @teacher.email %></p>
+<p><%= @teacher.contact_number %></p>
+<p><%= @teacher.full_name%></p>
+<p><%= @teacher.subject %></p>
+<%= button_to "Delete", faculty_path(@teacher), method: :delete, data: { confirm: "Are you sure?" } %>
+
+
+
+
+
+
+
