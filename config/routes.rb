@@ -2,22 +2,24 @@ Rails.application.routes.draw do
   get 'scholars/index'
   get 'scholars/new'
   get 'scholars/edit'
-  get 'scholars/destroy'
+  delete 'scholars/:id', to: 'scholars#destroy', as: 'scholar'
+  # get 'scholars/destroy'
+
   get 'faculties/index'
   get 'faculties/new'
   get 'faculties/show'
-  get 'faculties/destroy'
   get 'principals/index'
   get 'principals/new'
   get 'principals/show'
-  get 'principals/destroy'
-  # get 'books/index'
-  # get 'books/show'
-  # get 'books/new'
-  # get 'books/create'
-  # get 'books/edit'
-  # get 'books/update'
-  # get 'books/destroy'
+
+  resources :books
+    # get 'books/index'
+    # get 'books/show'
+    # get 'books/new'
+    # get 'books/create'
+    # get 'books/edit'
+    # get 'books/update'
+    # get 'books/destroy'
   namespace :management do
     resources :students
     resources :teachers

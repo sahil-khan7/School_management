@@ -1,2 +1,19 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<div class="log_in">
+<h1>Add New Book</h1>
+
+<%= form_with model: @book do |form| %>
+  <div>
+    <%= form.label :BookName %><br>
+    <%= form.text_field :book_name %>
+  </div>
+
+  <div>
+    <%= form.label :AuthorName %><br>
+    <%= form.text_field :author_name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+</div>

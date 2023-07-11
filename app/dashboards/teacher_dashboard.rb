@@ -37,7 +37,6 @@ class TeacherDashboard < Administrate::BaseDashboard
     email
     contact_number
     subject
-    Edit
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES

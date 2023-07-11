@@ -22,7 +22,7 @@
             <td><%= link_to "Edit", edit_student_registration_path %></td>
             <% end %>
             <% if teacher_signed_in? or admin_signed_in?%>
-            <td><%= link_to "Destroy", management_student_path(@student), data: {
+            <td><%= link_to "Destroy", scholar_path(students), data: {
                 turbo_method: :delete,
                 turbo_confirm: "Are you sure you want to destroy student ?"
               } %></td>
